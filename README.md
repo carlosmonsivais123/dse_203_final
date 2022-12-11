@@ -72,8 +72,10 @@
 4. walking distance (between nodes with route relationship
 
 ### Presentation
-* The folloeing is the PowerPoint presentation saved as a PDF.
-1. DSE 203 Final Presentation.pdf
+* The folloeing is the PowerPoint presentation saved as a PDF. The file Presentations_etl.pdf is part one and the DSE 203 Final Presentation.pdf is part two of the presentation.
+1. presentation_etl.pdf
+2. DSE 203 Final Presentation.pdf
+
 
 ### How to Run
 1. In order to run the following project, we need to open up a Google Coud Account since we will be using their services, however you get a free $300 credit when you open it up which is more than enough to run this project. Affterwards you will enable the following services:
@@ -83,15 +85,14 @@
 2. Afterwards you will retrieve the data listed above and store them in a GCS Bucket.
 
 3. Run the notebooks in the following order:
-  * 7. project_203.rtf
+  * 1. project_203.rtf
   * 2. clean_col.ipynb
-  * 1. add_coor.ipynb
+  * 3. add_coor.ipynb
   * 4. Joining_census_data.ipynb
-  * 3. crime_data_lon_lat.ipynb
-  * 5. project_etl.ipynb
-  * 6. reddit_scrapper_and_features.ipynb
+  * 5. crime_data_lon_lat.ipynb
+  * 6. project_etl.ipynb
+  * 7. reddit_scrapper_and_features.ipynb
 
 4. Now we can run the Neo4J Queries in th Cypher Queries in the order they are formatted in the text file.
 
-5. Examine the relationships in the Open Street Map output. 
-
+5. Examine the relationships in the Open Street Map output.
