@@ -1,0 +1,43 @@
+Create house nodes
+-------------------
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/bhanu211/test/main/Data_housing_prices_clean_coor.csv' AS row
+CREATE (:house {
+idx:row.idx ,price:row.price,
+beds:row.beds,bath:row.bath,
+sqft:row.sqft,lot_size:row.lot_size,
+address:row.address,
+location: point({latitude:toFloat(row.lat),longitude:toFloat(row.long)})
+})
+
+
+
+Create crime_incident nodes 
+---------------------------
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/bhanu211/test/main/Data_sdpd_geo_location.csv' AS row
+CREATE (:crime_incident {
+stop_id:row.stop_id,  beat:row.beat, beat_name:row.beat_name, reason_for_stopcode:row.reason_for_stopcode, 
+reason_for_stop_code_text:row.reason_for_stop_code_text, reason_for_stop_explanation:row.reason_for_stop_explanation,
+resultkey:row.resultkey, result:row.result, code:row.code, resulttext:row.resulttext, race:row.race,
+location: point({latitude:toFloat(row.latitude),longitude:toFloat(row.longitude)})
+}) 
+
+
+
+shortestPath /euclidean distance
+--------------
+MATCH (p1:PointOfInterest {type:'clock'}), (p2:PointOfInterest {name:'Zoo School'})
+RETURN point.distance(p1.location,p2.location)
+
+
+walking distance (between nodes with route relationship
+----------------------
+MATCH path=shortestpath((p1:PointOfInterest {type:'clock'})-[:ROUTE*]-(p2:PointOfInterest {name:'Zoo School'}))
+WITH relationships(path) AS rels
+UNWIND rels AS rel
+RETURN sum(rel.distance)
+
+
+The shortestPath() Cypher function will return the first shortest path by number of relationship hops it finds between two specified points.
+
+The apoc.algo.dijkstra() APOC function will return the shortest weighted path, based on a specified property on relationships between two specified points, irrespective of the number of hops between them
+
