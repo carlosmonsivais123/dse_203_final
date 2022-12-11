@@ -20,7 +20,7 @@ The goal of the project is to find relationships between crime, housing prices a
     * Ended up scraping 18,709 posts.
     * https://www.reddit.com/r/sandiego/
 5. Google Geocode API
-    * This is a Google Cloud Service that we were using that is similar to their Google Maps. However we will be inputting partial addresess to get the exact latitude and longitude we will be using to plot the crimes.
+    * This is a Google Cloud Service that we were using that is similar to their Google Maps. However we will be inputting partial address to get the exact latitude and longitude we will be using to plot the crimes.
     * https://developers.google.com/maps/documentation/geocoding/start
 6. Housing Data
     * Used chrome plugin webscraper.io for scraping [] realtor.com, it works in browser, streamlines web scraping.
@@ -43,8 +43,8 @@ The goal of the project is to find relationships between crime, housing prices a
 
 ### Project Technologies
 * Google Cloud
-    * Dataproc Clusters (Run Jupyter Notebooks): This is a centralized area where we ran our notebooks without worring about the version of libraries.
-    * Google Geocode API: This is an API to retrieve longitude and latitude data baed on partial addresses.
+    * Dataproc Clusters (Run Jupyter Notebooks): This is a centralized area where we ran our notebooks without worrying about the version of libraries.
+    * Google Geocode API: This is an API to retrieve longitude and latitude data based on partial addresses.
     * Google Cloud Storage Buckets (Store Data): This is a centralized storage repository where we stored all of our data. This made data source updates easier to do.
 * Neo4J Graph Database: We used the Neo4J graph databases to create the visualizations and node and edge creations.
 * Python: Used Python to scrape data and for data manipulation.
@@ -52,18 +52,18 @@ The goal of the project is to find relationships between crime, housing prices a
 
 ### Project Notebook Descriptions
 1. add_coor.ipynb
-   * Uses the Googlemaps library to match the address column to lat/long coordinates then adds them as columns to the df. Unused columns are also dropped. 
+   * Uses the Google Maps library to match the address column to lat/long coordinates then adds them as columns to the df. Unused columns are also dropped. 
 2. clean_col.ipynb
    * Removes substrings from the bath and bed columns. It also removes special characters from the bed, bath and price columns. Handles instances where bed and price had string values outside of what was already dealt with. Finishes by setting the columns to a usable data type. 
 3. crime_data_lon_lat.ipynb
    * This is the notebook where we merged our 5 crime data sources including Stops, race, reason for stop, result, complaints. After joining the data soources we cleaned the data by removing low level crimes such as jaywalking and then called the Google Geocode API to get the latitude and longitude for our address data we manipulated as part of the process.
 4. Joining_census_data.ipynb
-   * Drops unused columns, merges the 3 census trac datasets and renames the columns to more manageable things.
+   * Drops unused columns, merges the 3 census track data sets and renames the columns to more manageable things.
    * Takes the three census datasets: Decennial, Race, and Income, and merges them and selects appropriate variables and converts to necessary geo identification to merge with geojson polygon tract info and then outputs to a new csv, which is used in project_203.txt to create relationships those tract info - tract polygon relationships. 
 5. project_etl.ipynb
    * Takes the queried Amazon Athena OSM data and converts it into corresponding nodes and edges with identifying spatial coordinates and uploads into neo4j desktop (you must specify ip; user; password).
 6. reddit_scrapper_and_features.ipynb
-   * This notebook will extract data from Reddit from January 1, 2020 to January 1, 2021. After doing so it will send it to a GCS bucket. We can call in that input file and start to clean the Title column where we will do our sentiment analysis and also our text search matching. The sentiment analysis is done after the data is cleaned and will assign a score betweeen 0 and -1 scoring every Title. Afterwards an NLP pipeline will be created using Spacy to extract any similar neighborhoods that we have as a reference between all the titles to find which posts were talking about specific neighborhoods linking the setniment score to them.
+   * This notebook will extract data from Reddit from January 1, 2020 to January 1, 2021. After doing so it will send it to a GCS bucket. We can call in that input file and start to clean the Title column where we will do our sentiment analysis and also our text search matching. The sentiment analysis is done after the data is cleaned and will assign a score between 0 and -1 scoring every Title. Afterwards an NLP pipeline will be created using Spacy to extract any similar neighborhoods that we have as a reference between all the titles to find which posts were talking about specific neighborhoods linking the sentiment score to them.
 7. project_203.rtf
    * Contains the code to query Amazon Athena for Open Street Map data and then filter San Diego only SD data, to load all geojson files of neighborhood and tract ids, to load census tract statistical information (previously merged from 3 datasets), unstructured subreddit data and to create necessary entities and relationships for these objects. It also contains queries used to visualize data on NeoMap: https://github.com/stellasia/neomap
 
@@ -75,13 +75,13 @@ The goal of the project is to find relationships between crime, housing prices a
 4. walking distance (between nodes with route relationship
 
 ### Presentation
-* The folloeing is the PowerPoint presentation saved as a PDF. The file Presentations_etl.pdf is part one and the DSE 203 Final Presentation.pdf is part two of the presentation.
+* The following is the PowerPoint presentation saved as a PDF. The file Presentations_etl.pdf is part one and the DSE 203 Final Presentation.pdf is part two of the presentation.
 1. presentation_etl.pdf
 2. DSE 203 Final Presentation.pdf
 
 
 ### How to Run
-1. In order to run the following project, we need to open up a Google Coud Account since we will be using their services, however you get a free $300 credit when you open it up which is more than enough to run this project. Affterwards you will enable the following services:
+1. In order to run the following project, we need to open up a Google Cloud Account since we will be using their services, however you get a free $300 credit when you open it up which is more than enough to run this project. Afterwards, you will enable the following services:
   * Dataproc, Google Geocode API, Google Cloud Storage Buckets
   * You need to obtain an API key from the Google Geocode API service.
 
