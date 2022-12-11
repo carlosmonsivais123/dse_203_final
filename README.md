@@ -3,16 +3,23 @@
 
 ### Data Sources
 1. Census Data 
-2. San Diego Police Department
+   * https://data.census.gov/
+3. San Diego Police Department
     * This data consists of files that are about stops, race, reason for stop, result, and complaints. We joined these files together in the script below in order to do the analysis.
-3. Reddit
+    *  https://data.sandiego.gov/datasets/police-ripa-stops/
+    *  https://data.sandiego.gov/datasets/police-ripa-stop-result/
+    *  https://data.sandiego.gov/datasets/police-ripa-stop-reason/
+    * https://data.sandiego.gov/datasets/police-ripa-race/
+4. Reddit
     * Data was scraped from [] Reddit using the sandiego subreddit for the years January 1, 2020, and January 1, 2021.
     * The following fields were scraped:
         * Score, author, full link, date, number of comments, title, subreddit location, number of subscribers, title, image url, upvote ratio.
     * Ended up scraping 18,709 posts.
-4. Google Geocode API
+    * https://www.reddit.com/r/sandiego/
+5. Google Geocode API
     * This is a Google Cloud Service that we were using that is similar to their Google Maps. However we will be inputting partial addresess to get the exact latitude and longitude we will be using to plot the crimes.
-5. Housing Data
+    * https://developers.google.com/maps/documentation/geocoding/start
+6. Housing Data
     * Used chrome plugin webscraper.io for scraping [] realtor.com, it works in browser, streamlines web scraping.
     * Set up to select each link on a page
     * Scrapped the first 50 pages of listings for San Diego ~2000 houses
@@ -22,9 +29,14 @@
         * Number of beds
         * Number of baths
         * Area property
-6. GeoJson Mapping Polygons
+    * https://www.realtor.com/realestateandhomes-search/San-Diego_CA/pg-1
+7. GeoJson Mapping Polygons
     * These GeoJson Mapping Polygons are from the Open Street Map that we downloaded from Amazon, however we are only using the San Diego polygons since the project is 100GB.
     * The link to these polygons are here, just make sure you use the script below to query for San Diego and download it.
+    * https://daylightmap.org/earth/index.html (points of interest) Must be queried with Amazon Athen
+    * Create an instance here: https://us-west-2.console.aws.amazon.com/athena/home?region=us-west-2#/landing-page. See (https://github.com/johnymontana/daylight-earth-graph/blob/main/POI_import.ipynb)
+    * Download geojson: https://data.sandiego.gov/datasets/pd-neighborhoods/Only necessary to download 06 (California): https://github.com/arcee123/GIS_GEOJSON_CENSUS_TRACTS/blob/master/06.geojson 
+
 
 ### Project Technologies
 * Google Cloud
@@ -62,4 +74,3 @@
 ### Presentation
 * The folloeing is the PowerPoint presentation saved as a PDF.
 1. DSE 203 Final Presentation.pdf
-
