@@ -41,7 +41,8 @@
 3. clean_col.ipynb
    * Removes substrings from the bath and bed columns. It also removes special characters from the bed, bath and price columns. Handles instances where bed and price had string values outside of what was already dealt with. Finishes by setting the columns to a usable data type. 
 5. crime_data_lon_lat.ipynb
-6. Joining_census_data.ipynb
+   * This is the notebook where we merged our 5 crime data sources including Stops, race, reason for stop, result, complaints. After joining the data soources we cleaned the data by removing low level crimes such as jaywalking and then called the Google Geocode API to get the latitude and longitude for our address data we manipulated as part of the process.
+7. Joining_census_data.ipynb
    * Drops unused columns, merges the 3 census trac datasets and renames the columns to more manageable things.
    * Takes the three census datasets: Decennial, Race, and Income, and merges them and selects appropriate variables and converts to necessary geo identification to merge with geojson polygon tract info and then outputs to a new csv, which is used in project_203.txt to create relationships those tract info - tract polygon relationships. 
 8. neo4j_notebook.ipynb
@@ -55,4 +56,8 @@
 2. Create crime_incident nodes 
 3. shortestPath /euclidean distance
 4. walking distance (between nodes with route relationship
+
+### Presentation
+* The folloeing is the PowerPoint presentation saved as a PDF.
+1. DSE 203 Final Presentation.pdf
 
