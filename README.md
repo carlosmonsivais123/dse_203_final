@@ -1,6 +1,9 @@
 # Using Space to Define Opportunity
 ## By: James Ades, Daniel Hartley, Bhanu Muvva, Carlos Monsivais
 
+### Project Goal
+The goal of the project is to find relationships between crime, housing prices and Reddit posts in order to find the safest place to live in San Diego and visualize this in a spatial aspect with edges and nodes connecting the properties in the area.
+
 ### Data Sources
 1. Census Data 
    * https://data.census.gov/
