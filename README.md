@@ -37,12 +37,17 @@
 
 ### Project Notebook Descriptions
 1. add_coor.ipynb
-2. clean_col.ipynb
-3. crime_data_lon_lat.ipynb
-4. Joining_census_data.ipynb
-5. neo4j_notebook.ipynb
-6. project_etl.ipynb
-7. reddit_scrapper_and_features.ipynb
+   * Uses the Googlemaps library to match the address column to lat/long coordinates then adds them as columns to the df. Unused columns are also dropped. 
+3. clean_col.ipynb
+   * Removes substrings from the bath and bed columns. It also removes special characters from the bed, bath and price columns. Handles instances where bed and price had string values outside of what was already dealt with. Finishes by setting the columns to a usable data type. 
+5. crime_data_lon_lat.ipynb
+6. Joining_census_data.ipynb
+   * Drops unused columns, merges the 3 census trac datasets and renames the columns to more manageable things.
+   * Takes the three census datasets: Decennial, Race, and Income, and merges them and selects appropriate variables and converts to necessary geo identification to merge with geojson polygon tract info and then outputs to a new csv, which is used in project_203.txt to create relationships those tract info - tract polygon relationships. 
+8. neo4j_notebook.ipynb
+9. project_etl.ipynb
+   * Takes the queried Amazon Athena OSM data and converts it into corresponding nodes and edges with identifying spatial coordinates and uploads into neo4j desktop (you must specify ip; user; password).
+11. reddit_scrapper_and_features.ipynb
 
 ### Cypher Queries
 
