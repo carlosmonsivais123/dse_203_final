@@ -76,8 +76,22 @@
 1. DSE 203 Final Presentation.pdf
 
 ### How to Run
-* In order to run the following project, we need to open up a Google Coud Account since we will be using their services, however you get a free $300 credit when you open it up which is more than enough to run this project. Affterwards you will enable the following services:
+1. In order to run the following project, we need to open up a Google Coud Account since we will be using their services, however you get a free $300 credit when you open it up which is more than enough to run this project. Affterwards you will enable the following services:
   * Dataproc, Google Geocode API, Google Cloud Storage Buckets
   * You need to obtain an API key from the Google Geocode API service.
 
-* Afterwards you will retrieve the data listed above and 
+2. Afterwards you will retrieve the data listed above and store them in a GCS Bucket.
+
+3. Run the notebooks in the following order:
+  * 7. project_203.rtf
+  * 2. clean_col.ipynb
+  * 1. add_coor.ipynb
+  * 4. Joining_census_data.ipynb
+  * 3. crime_data_lon_lat.ipynb
+  * 5. project_etl.ipynb
+  * 6. reddit_scrapper_and_features.ipynb
+
+4. Now we can run the Neo4J Queries in th Cypher Queries in the order they are formatted in the text file.
+
+5. Examine the relationships in the Open Street Map output. 
+
