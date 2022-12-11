@@ -49,6 +49,8 @@
    * Takes the queried Amazon Athena OSM data and converts it into corresponding nodes and edges with identifying spatial coordinates and uploads into neo4j desktop (you must specify ip; user; password).
 6. reddit_scrapper_and_features.ipynb
    * This notebook will extract data from Reddit from January 1, 2020 to January 1, 2021. After doing so it will send it to a GCS bucket. We can call in that input file and start to clean the Title column where we will do our sentiment analysis and also our text search matching. The sentiment analysis is done after the data is cleaned and will assign a score betweeen 0 and -1 scoring every Title. Afterwards an NLP pipeline will be created using Spacy to extract any similar neighborhoods that we have as a reference between all the titles to find which posts were talking about specific neighborhoods linking the setniment score to them.
+7. project_203.rtf
+   * Contains the code to query Amazon Athena for Open Street Map data and then filter San Diego only SD data, to load all geojson files of neighborhood and tract ids, to load census tract statistical information (previously merged from 3 datasets), unstructured subreddit data and to create necessary entities and relationships for these objects. It also contains queries used to visualize data on NeoMap: https://github.com/stellasia/neomap
 
 ### Cypher Queries
 * The following files are queries that we used within the Neo4J to query our data as a graph database.
