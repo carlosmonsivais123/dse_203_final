@@ -38,17 +38,17 @@
 ### Project Notebook Descriptions
 1. add_coor.ipynb
    * Uses the Googlemaps library to match the address column to lat/long coordinates then adds them as columns to the df. Unused columns are also dropped. 
-3. clean_col.ipynb
+2. clean_col.ipynb
    * Removes substrings from the bath and bed columns. It also removes special characters from the bed, bath and price columns. Handles instances where bed and price had string values outside of what was already dealt with. Finishes by setting the columns to a usable data type. 
-5. crime_data_lon_lat.ipynb
+3. crime_data_lon_lat.ipynb
    * This is the notebook where we merged our 5 crime data sources including Stops, race, reason for stop, result, complaints. After joining the data soources we cleaned the data by removing low level crimes such as jaywalking and then called the Google Geocode API to get the latitude and longitude for our address data we manipulated as part of the process.
-7. Joining_census_data.ipynb
+4. Joining_census_data.ipynb
    * Drops unused columns, merges the 3 census trac datasets and renames the columns to more manageable things.
    * Takes the three census datasets: Decennial, Race, and Income, and merges them and selects appropriate variables and converts to necessary geo identification to merge with geojson polygon tract info and then outputs to a new csv, which is used in project_203.txt to create relationships those tract info - tract polygon relationships. 
-8. neo4j_notebook.ipynb
-9. project_etl.ipynb
+5. project_etl.ipynb
    * Takes the queried Amazon Athena OSM data and converts it into corresponding nodes and edges with identifying spatial coordinates and uploads into neo4j desktop (you must specify ip; user; password).
-11. reddit_scrapper_and_features.ipynb
+6. reddit_scrapper_and_features.ipynb
+   * This notebook will extract data from Reddit from January 1, 2020 to January 1, 2021. After doing so it will send it to a GCS bucket. We can call in that input file and start to clean the Title column where we will do our sentiment analysis and also our text search matching. The sentiment analysis is done after the data is cleaned and will assign a score betweeen 0 and -1 scoring every Title. Afterwards an NLP pipeline will be created using Spacy to extract any similar neighborhoods that we have as a reference between all the titles to find which posts were talking about specific neighborhoods linking the setniment score to them.
 
 ### Cypher Queries
 * The following files are queries that we used within the Neo4J to query our data as a graph database.
