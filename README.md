@@ -74,3 +74,10 @@
 ### Presentation
 * The folloeing is the PowerPoint presentation saved as a PDF.
 1. DSE 203 Final Presentation.pdf
+
+### How to Run
+* In order to run the following project, we need to open up a Google Coud Account since we will be using their services, however you get a free $300 credit when you open it up which is more than enough to run this project. Affterwards you will enable the following services:
+  * Dataproc, Google Geocode API, Google Cloud Storage Buckets
+  * You need to obtain an API key from the Google Geocode API service.
+
+* Afterwards you will retrieve the data listed above and 
