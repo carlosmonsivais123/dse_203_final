@@ -50,7 +50,9 @@
 11. reddit_scrapper_and_features.ipynb
 
 ### Cypher Queries
-
-
-### Neo4J Queries
 * The following files are queries that we used within the Neo4J to query our data as a graph database.
+1. Create house nodes
+2. Create crime_incident nodes 
+3. shortestPath /euclidean distance
+4. walking distance (between nodes with route relationship
+
