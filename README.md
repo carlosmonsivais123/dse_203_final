@@ -7,6 +7,12 @@ The goal of the project is to find relationships between crime, housing prices a
 ### Data Sources
 1. Census Data 
    * https://data.census.gov/
+   * Datasets:
+       * ACSDP5Y2020.DP05
+       * ACSST5Y2020.S1903
+       * DECENNIALPL2020
+
+so they know what datasets to grab. I think that's par for the course with Census stuff.
 3. San Diego Police Department
     * This data consists of files that are about stops, race, reason for stop, result, and complaints. We joined these files together in the script below in order to do the analysis.
     *  https://data.sandiego.gov/datasets/police-ripa-stops/
