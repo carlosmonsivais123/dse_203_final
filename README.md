@@ -50,8 +50,10 @@ The goal of the project is to find relationships between crime, housing prices a
     * Google Geocode API: This is an API to retrieve longitude and latitude data based on partial addresses.
     * Google Cloud Storage Buckets (Store Data): This is a centralized storage repository where we stored all of our data. This made data source updates easier to do.
 * Neo4J Graph Database: We used the Neo4J graph databases to create the visualizations and node and edge creations.
+  * NeoMap: Used this as a connector to visualize our graph database objects on a map.
 * Python: Used Python to scrape data and for data manipulation.
 * PostgreSQL: Used this to merge our datasets and for data manipulation.
+* Amazon Athena: Ths is the Open Street Map that we downloaded from Amazon, however we are only using the San Diego polygons since the project is 100GB.
 
 ### Project Notebook Descriptions
 1. add_coor.ipynb
