@@ -33,11 +33,14 @@ The goal of the project is to find relationships between crime, housing prices a
         * Number of baths
         * Area property
     * https://www.realtor.com/realestateandhomes-search/San-Diego_CA/pg-1
-7. GeoJson Mapping Polygons
+
+7. Open Street Maps
     * These GeoJson Mapping Polygons are from the Open Street Map that we downloaded from Amazon, however we are only using the San Diego polygons since the project is 100GB.
     * The link to these polygons are here, just make sure you use the script below to query for San Diego and download it.
-    * https://daylightmap.org/earth/index.html (points of interest) Must be queried with Amazon Athen
+    * https://daylightmap.org/earth/index.html (points of interest) Must be queried with Amazon Athena
     * Create an instance here: https://us-west-2.console.aws.amazon.com/athena/home?region=us-west-2#/landing-page. See (https://github.com/johnymontana/daylight-earth-graph/blob/main/POI_import.ipynb)
+    
+8. GeoJson Mapping Polygons    
     * Download geojson: https://data.sandiego.gov/datasets/pd-neighborhoods/Only necessary to download 06 (California): https://github.com/arcee123/GIS_GEOJSON_CENSUS_TRACTS/blob/master/06.geojson 
 
 
