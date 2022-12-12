@@ -93,14 +93,15 @@ The goal of the project is to find relationships between crime, housing prices a
 2. Afterwards you will retrieve the data listed above and store them in a GCS Bucket.
 
 3. Run the notebooks in the following order:
-  * 1. project_203.rtf
-  * 2. clean_col.ipynb
-  * 3. add_coor.ipynb
-  * 4. Joining_census_data.ipynb
-  * 5. crime_data_lon_lat.ipynb
-  * 6. project_etl.ipynb
-  * 7. reddit_scrapper_and_features.ipynb
+  * 1. project_203.rtf (Only Run the first two queries)
+  * 2. project_203.rtf (After the data has been imported run the rest of the queries after the first two queries)
+  * 3. clean_col.ipynb
+  * 4. add_coor.ipynb
+  * 5. Joining_census_data.ipynb
+  * 6. crime_data_lon_lat.ipynb
+  * 7. project_etl.ipynb
+  * 8. reddit_scrapper_and_features.ipynb
 
-4. Now we can run the Neo4J Queries in the order they are formatted in the text file.
+4. Now we can run the Neo4J Queries in the order they are formatted in the text file. 
 
-5. Examine the relationships in the Open Street Map output.
+5. Examine/visualize relationships among housing, crime, and points of interest.
