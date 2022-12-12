@@ -101,6 +101,6 @@ The goal of the project is to find relationships between crime, housing prices a
   * 6. project_etl.ipynb
   * 7. reddit_scrapper_and_features.ipynb
 
-4. Now we can run the Neo4J Queries in th Cypher Queries in the order they are formatted in the text file.
+4. Now we can run the Neo4J Queries in the order they are formatted in the text file.
 
 5. Examine the relationships in the Open Street Map output.
