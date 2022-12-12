@@ -40,8 +40,7 @@ The goal of the project is to find relationships between crime, housing prices a
     * https://www.realtor.com/realestateandhomes-search/San-Diego_CA/pg-1
 
 7. Open Street Maps
-    * These JSON Mapping is from the Open Street Map that we downloaded from Amazon, however we are only using the San Diego polygons since the project is 100GB.
-    * The link to these polygons are here, just make sure you use the script below to query for San Diego and download it.
+    * The link is here, just make sure you use the script below to query for San Diego and download it.
     * https://daylightmap.org/earth/index.html (points of interest) Must be queried with Amazon Athena
     * Create an instance here: https://us-west-2.console.aws.amazon.com/athena/home?region=us-west-2#/landing-page. See (https://github.com/johnymontana/daylight-earth-graph/blob/main/POI_import.ipynb)
     
